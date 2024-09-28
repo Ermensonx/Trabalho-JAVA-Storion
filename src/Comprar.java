@@ -7,18 +7,13 @@ Scanner entrada = new Scanner(System.in); // Cria um objeto Scanner para captura
 
 public void cadastrar() { // Método para registrar os dados do cliente (nome e idade) // Método responsável pelo cadastro de um cliente no sistema
 System.out.println("=================================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("||FAÇA SEU CADASTRO PARA COMEÇAR||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("=================================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 
-System.out.println("\nQual seu nome?"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 setNome(entrada.nextLine()); // Captura e armazena a entrada do usuário (como nome ou idade)
 
 if (getNome().isEmpty()) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
 
 while (getNome().isEmpty()) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Nome inválido! Digite um nome válido."); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("Qual seu nome?"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 setNome(entrada.nextLine()); // Captura e armazena a entrada do usuário (como nome ou idade)
             }
         }
@@ -39,9 +34,6 @@ System.out.println("\n"); // Exibe saída no console // Exibe mensagens e instru
 
 public void comecar() { // Método para iniciar a interação com o sistema de menu // Declaração de um método público que pode ser acessado por outras classes
 System.out.println("==========================================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println(" SEJA BEM VINDO(A) " + getNome() + " !!! "); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("==========================================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("\nPor onde deseja começar?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                 + "\n========MENU========\n"
                 + "[1] Consultar saldo\n"
                 + "[2] Fazer depósito\n"
@@ -81,8 +73,6 @@ System.out.println("Encerrando o programa..."); // Exibe saída no console // Ex
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoQuatroMenu < 1 || opcaoQuatroMenu > 3) { // Cria uma instância da classe Menu para exibir opções para o usuário
 System.out.println("Opção inválida. Escolha uma opção válida!"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("O que deseja fazer:\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                             + "[1] Atualizar cadastro\n"
                             + "[2] Voltar\n"
                             + "[3] Encerrar");
@@ -121,14 +111,12 @@ System.out.println("\nVocê tem R$" + getSaldo() + "\n"); // Exibe saída no con
         menus.menuBebida();
 int opcaoMenuBebida = entrada.nextInt(); // Cria uma instância da classe Menu para exibir opções para o usuário
 
-if (opcaoMenuBebida == 1) { // Cria uma instância da classe Menu para exibir opções para o usuário
 
             float valorProduto = 10.5f;
 if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Refrigerante.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outra bebida\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
@@ -157,7 +145,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -176,7 +163,6 @@ if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que ex
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Suco.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outra bebida\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
@@ -205,7 +191,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -222,19 +207,11 @@ if (opcaoFinal == 1) { // Início de uma estrutura condicional que executa um bl
 if (getIdade() < 18){ // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
 System.out.println("\n" + getNome() + " você tem " + getIdade() // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + " anos. Você é menor de idade!\n");
-System.out.println("================================================================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("||          *******Lei federal 13.106/16*******                ||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("||PROIBIDA A VENDA DE BEBIDAS ALCOÓLICAS PARA MENORES DE IDADE!||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("||          **********VENDA CANCELADA**********                ||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("================================================================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("\nO que deseja fazer:\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                 + "[1] Atualizar cadastro\n"
                 + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal\n" // Cria uma instância da classe Menu para exibir opções para o usuário
                 + "[4] Sair");
-int opcaoMenuCerveja = entrada.nextInt(); // Cria uma instância da classe Menu para exibir opções para o usuário
 
-if (opcaoMenuCerveja == 1){ // Cria uma instância da classe Menu para exibir opções para o usuário
                     cadastrar(); // Método para registrar os dados do cliente (nome e idade)
                     status();
 System.out.println("Cadastro atualizado com sucesso!" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
@@ -250,14 +227,11 @@ System.out.println("Encerrando o programa..."); // Exibe saída no console // Ex
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoMenuCerveja < 1 || opcaoMenuCerveja > 4) { // Cria uma instância da classe Menu para exibir opções para o usuário
 System.out.println("Opção inválida! Escolha uma opção:\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("O que deseja fazer:\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                                 + "[1] Atualizar cadastro\n"
                                 + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal\n" // Cria uma instância da classe Menu para exibir opções para o usuário
                                 + "[4] Sair");
-opcaoMenuCerveja = entrada.nextInt(); // Cria uma instância da classe Menu para exibir opções para o usuário
 
-if (opcaoMenuCerveja == 1) { // Cria uma instância da classe Menu para exibir opções para o usuário
                             cadastrar(); // Método para registrar os dados do cliente (nome e idade)
                             status();
 System.out.println("Cadastro atualizado com sucesso!" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
@@ -280,7 +254,6 @@ if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que ex
                     setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Cerveja.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                             + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                             + "[1] Comprar outra bebida\n"
                             + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
@@ -309,7 +282,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -333,13 +305,11 @@ public void comprarComida(){ // Método para comprar comida // Declaração de u
         menus.menuComida();
 int opcaoMenuComida = entrada.nextInt(); // Cria uma instância da classe Menu para exibir opções para o usuário
 
-if (opcaoMenuComida == 1) { // Cria uma instância da classe Menu para exibir opções para o usuário
             float valorProduto = 8f;
 if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Salgado.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outra comida\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
@@ -368,7 +338,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -387,7 +356,6 @@ if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que ex
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Pastel.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outra comida\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
@@ -416,7 +384,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -435,7 +402,6 @@ if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que ex
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Salada.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outra comida\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
@@ -464,7 +430,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -487,20 +452,17 @@ public void comprarHigienie(){ // Declaração de um método público que pode s
         menus.menuHigiene();
 int opcaoMenuHigiene = entrada.nextInt(); // Cria uma instância da classe Menu para exibir opções para o usuário
 
-if (opcaoMenuHigiene == 1) { // Cria uma instância da classe Menu para exibir opções para o usuário
             float valorProduto = 19.9f;
 if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Shampoo.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outro produto de higiene\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 int segundaOpcaoHigiene = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 if (segundaOpcaoHigiene == 1) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comprarHigienie();
-} else if (segundaOpcaoHigiene == 2) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comprarProduto(); // Método para iniciar a compra de um produto
 }else if (segundaOpcaoHigiene == 3){ // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comecar(); // Método para iniciar a interação com o sistema de menu
@@ -522,7 +484,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -541,14 +502,12 @@ if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que ex
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Sabonete.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outro produto de higiene\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 int segundaOpcaoHigiene = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 if (segundaOpcaoHigiene == 1) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comprarHigienie();
-} else if (segundaOpcaoHigiene == 2) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comprarProduto(); // Método para iniciar a compra de um produto
 }else if (segundaOpcaoHigiene == 3){ // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comecar(); // Método para iniciar a interação com o sistema de menu
@@ -570,7 +529,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -589,14 +547,12 @@ if (valorProduto <= getSaldo()) { // Início de uma estrutura condicional que ex
                 setSaldo(getSaldo() - valorProduto);
 System.out.println("\nVoce comprou o produto Desodorante.\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "Seu saldo atual é R$" + getSaldo() + "\n");
-System.out.println("O que deseja fazer?\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                         + "[1] Comprar outro produto de higiene\n"
                         + "[2] Comprar outro produto\n"
 + "[3] Voltar ao Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 int segundaOpcaoHigiene = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 if (segundaOpcaoHigiene == 1) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comprarHigienie();
-} else if (segundaOpcaoHigiene == 2) { // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comprarProduto(); // Método para iniciar a compra de um produto
 }else if (segundaOpcaoHigiene == 3){ // Início de uma estrutura condicional que executa um bloco de código com base em uma condição
                     comecar(); // Método para iniciar a interação com o sistema de menu
@@ -618,7 +574,6 @@ if (opcaoFinal == 1){ // Início de uma estrutura condicional que executa um blo
 } else { // Bloco alternativo que é executado se a condição do 'if' for falsa
 while (opcaoFinal < 1 || opcaoFinal > 2) { // Estrutura de repetição que continua executando enquanto a condição for verdadeira
 System.out.println("Opção inválida! Escolha uma opção\n\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("[1] Fazer depósito\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 + "[2] Menu Principal"); // Cria uma instância da classe Menu para exibir opções para o usuário
 opcaoFinal = entrada.nextInt(); // Captura e armazena a entrada do usuário (como nome ou idade)
 
@@ -641,7 +596,6 @@ System.out.println("Opção inválida! Escolha uma opção: \n"); // Exibe saíd
 public void comprarProduto(){ // Método para iniciar a compra de um produto // Declaração de um método público que pode ser acessado por outras classes
         menus.menuProdutos();
 int opcaoMenuProdutos = entrada.nextInt(); // Cria uma instância da classe Menu para exibir opções para o usuário
-if (opcaoMenuProdutos == 1){ // Cria uma instância da classe Menu para exibir opções para o usuário
             comprarBebida(); // Método para comprar uma bebida
 } else if (opcaoMenuProdutos == 2){ // Cria uma instância da classe Menu para exibir opções para o usuário
             comprarComida(); // Método para comprar comida
@@ -655,9 +609,6 @@ System.out.println("Opção inválida. Escolha uma opção válida:\n"); // Exib
 
 public void consultarSaldo() { // Método para consultar o saldo atual do cliente // Declaração de um método público que pode ser acessado por outras classes
 System.out.println("========="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("||SALDO||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("========="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("\n" + this.getNome() + " seu saldo é R$ " + this.getSaldo() // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                 + "\nO que deseja fazer:\n"
                 + "[1] Nova consulta\n"
                 + "[2] Fazer depósito\n"
@@ -683,9 +634,6 @@ System.out.println("Opção inválida. Escolha uma opção válida:\n"); // Exib
 
 public void fazerDeposito() { // Método para fazer depósito na conta do cliente // Declaração de um método público que pode ser acessado por outras classes
 System.out.println("============"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("||DEPÓSITO||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("============"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("\nQual o valor do depósito?"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
 float valor = entrada.nextFloat(); // Captura e armazena a entrada do usuário (como nome ou idade)
         this.setSaldo(this.getSaldo() + valor);
         menuDeposito();
@@ -715,9 +663,6 @@ System.out.println("Opção inválida. Escolha uma opção válida:\n"); // Exib
     }
 public void status(){ // Declaração de um método público que pode ser acessado por outras classes
 System.out.println("======================="); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("|| DADOS DO CADASTRO ||"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("=======================\n"); // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
-System.out.println("Nome: " + getNome() +"\n" // Exibe saída no console // Exibe mensagens e instruções para o usuário no console
                 + "Idade: " + getIdade() + "\n");
     }
 
